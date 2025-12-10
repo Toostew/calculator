@@ -6,32 +6,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tookaystewie.controllers.calculatorViewController">
    <children>
-      <Label alignment="CENTER_RIGHT" layoutX="43.0" layoutY="38.0" prefHeight="77.0" prefWidth="271.0" style="-fx-background-color: #b5b5b5;" text="Label" textAlignment="CENTER">
+      <Label fx:id="resultLabel" alignment="CENTER_RIGHT" layoutX="43.0" layoutY="38.0" prefHeight="77.0" prefWidth="271.0" style="-fx-background-color: #b5b5b5;" text="Use the KeyPad" textAlignment="CENTER">
          <font>
             <Font name="Calibri" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="66.0" layoutY="160.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="1" />
-      <Button layoutX="240.0" layoutY="160.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="3" />
-      <Button layoutX="153.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="2" />
-      <Button layoutX="66.0" layoutY="206.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="4" />
-      <Button layoutX="240.0" layoutY="206.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="6" />
-      <Button layoutX="153.0" layoutY="207.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="5" />
-      <Button layoutX="66.0" layoutY="253.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="7" />
-      <Button layoutX="240.0" layoutY="253.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="9" />
-      <Button layoutX="153.0" layoutY="254.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="8" />
+      <Button layoutX="66.0" layoutY="160.0" mnemonicParsing="false" onAction="#one" prefHeight="38.0" prefWidth="52.0" text="1" />
+      <Button layoutX="240.0" layoutY="160.0" mnemonicParsing="false" onAction="#three" prefHeight="38.0" prefWidth="52.0" text="3" />
+      <Button layoutX="153.0" layoutY="161.0" mnemonicParsing="false" onAction="#two" prefHeight="38.0" prefWidth="52.0" text="2" />
+      <Button layoutX="66.0" layoutY="206.0" mnemonicParsing="false" onAction="#four" prefHeight="38.0" prefWidth="52.0" text="4" />
+      <Button layoutX="240.0" layoutY="206.0" mnemonicParsing="false" onAction="#six" prefHeight="38.0" prefWidth="52.0" text="6" />
+      <Button layoutX="153.0" layoutY="207.0" mnemonicParsing="false" onAction="#five" prefHeight="38.0" prefWidth="52.0" text="5" />
+      <Button layoutX="66.0" layoutY="253.0" mnemonicParsing="false" onAction="#seven" prefHeight="38.0" prefWidth="52.0" text="7" />
+      <Button layoutX="240.0" layoutY="253.0" mnemonicParsing="false" onAction="#nine" prefHeight="38.0" prefWidth="52.0" text="9" />
+      <Button layoutX="153.0" layoutY="254.0" mnemonicParsing="false" onAction="#eight" prefHeight="38.0" prefWidth="52.0" text="8" />
       <ButtonBar buttonMinWidth="10.0" layoutX="78.0" layoutY="334.0" prefHeight="40.0" prefWidth="187.0">
         <buttons>
-            <Button mnemonicParsing="false" text="*" />
-            <Button mnemonicParsing="false" text="/" />
-            <Button mnemonicParsing="false" text="+" />
-            <Button mnemonicParsing="false" text="-" />
-          <Button alignment="CENTER" mnemonicParsing="false" text="=" />
+            <Button mnemonicParsing="false" onAction="#multiply" text="*" />
+            <Button mnemonicParsing="false" onAction="#divide" text="/" />
+            <Button mnemonicParsing="false" onAction="#plus" text="+" />
+            <Button mnemonicParsing="false" onAction="#minus" text="-" />
+          <Button alignment="CENTER" mnemonicParsing="false" onAction="#equals" text="=" />
         </buttons>
       </ButtonBar>
-      <Button layoutX="153.0" layoutY="296.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="52.0" text="0" />
+      <Button layoutX="153.0" layoutY="296.0" mnemonicParsing="false" onAction="#zero" prefHeight="38.0" prefWidth="52.0" text="0" />
    </children>
 </AnchorPane>
