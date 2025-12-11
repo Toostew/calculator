@@ -12,7 +12,7 @@ public class calculatorViewController {
     //controller class for calculatorView.fxml
     //idea: use Shunting Yard algorithm to convert an expression into RPN form
     //I know how to calculate RPN forms so this is appropriate
-    //TODO: implement shunting yard algorithm, then RPN parser.
+    //DONE: implement shunting yard algorithm, then RPN parser.
     //TODO: change ints to something larger like long
 
     @FXML
@@ -191,7 +191,9 @@ public class calculatorViewController {
         if(sinceLastOperator != 0 && currentNumber != 0){
             firstInput.addLast(String.valueOf(currentNumber));
             resetCurrentNumber();
+            currentNumber = compute();
             updateDisplay("=");
+            firstInput.clear();
 
 
 
